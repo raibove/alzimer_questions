@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width , initial-scale=1.0">
+		<title>Alzimer</title>
+		<link rel="stylesheet" type="text/css" href="s1.css">
+	</head>
+	<body>
+		<div id="header">
+			<header id="navigation" class="cd-main-header">
+				<button class="login" type="submit" style="width:auto;">Login / Sign-up</button>
+			</header>
+		    <div class="clearfix"></div>
+		    <div id="title">
+				<section class="header-content">
+					<h1 class="header-title">A hand to elderly</h1><br>
+					<h3 class="header-subtitle">A useful project for your health</h3>
+				</section>
+			</div>
+		</div>
+		<div class="div1">
+			<h1 class="heading1">You Care. We Too.</h1>
+			<p class="para1">This app will help people to identify that they have some symptoms of alzheimer. At night user have to enter details of what they ate and other special activities they performed. It will be stored in the database and questions based on it will be formed and user have to answer it on next day</p>
+		</div>
+		<div class="div3"> <!-- Features-->
+			<div class="container">
+				<div class="f f1">
+					<span class="dot dot1"></span>
+					<p class="feat">Easy to use</p>
+					<p class="info">The design is made simple so that anyone can use it at ease. It is a user-friendly website.</p>
+				</div>
+				<div class="f f2">
+					<span class="dot dot2"></span>
+					<p class="feat">Detailed-Analysis</p>
+					<p class="info">You will get a analysis on the basis of answers that you provide daily.</p>
+				</div>
+				<div class="f f3">
+					<span class="dot dot3"></span>
+					<p class="feat">Privacy-friendly</p>
+					<p class="info">The data we get from your answers is safe with us. We do not share the data with anyone.</p>
+				</div>
+			</div><!-- end of div 3 -->
+		</div>
+		<div class="div2">
+			<!--iframe src="https://www.youtube.com/embed/OJp0BM5ujj0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="demo1"></iframe>
+			-->
+		</div>
+
+		<div class="modal">
+			<div class="modal-content">
+				<span class="close-button">&times;</span>
+				Its it d
+				<form>
+				    <div class="containerBox">
+						<label for="uname"><b>Username</b></label>
+						<input type="text" placeholder="Enter Username" name="uname" required>
+						<label for="psw"><b>Password</b></label>
+						<input type="password" placeholder="Enter Password" name="psw" required>
+						<button type="submit">Login</button>
+						<label>
+						    <input type="checkbox" checked="checked" name="remember"> Remember me
+						</label>
+				    </div>
+				    <div class="containerBox" style="background-color:#f1f1f1">
+				        <button type="button" class="cancelbtn">Cancel</button>
+				        <span class="psw"><a href="#">Forgot password?</a></span>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script>
+			var modal = document.querySelector(".modal");
+			var login  = document.querySelector(".login");
+			var closeButton = document.querySelector(".close-button");
+			function toggleModal(){
+				console.log("This is modal");
+				modal.classList.toggle(".show-modal");
+			}
+			function windowOnClick(event){
+				if(event.target === modal){
+					toggleModal();
+				}
+			}
+
+			closeButton.addEventListener("click",toggleModal);
+			login.addEventListener("click",toggleModal);
+			window.addEventListener("click",windowOnClick);
+		</script>
+	</body>
+</html>
